@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FairMatch - Smart Job Fair Platform</title>
+
+<!-- Chart.js (used by the recruiter/admin dashboards) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+
+<!-- App styles -->
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="nav-root"></div>
+<div id="app"></div>
+
+<!-- Candidate/job matching logic (must load before app.js uses it) -->
+<script src="matching.js"></script>
+
+<!-- Main application logic (rendering, state, views) -->
+<script src="app.js"></script>
+
+<!-- ============================================================
+     FIREBASE INTEGRATION
+     This block connects the existing candidate registration form
+     above to Firebase Realtime Database. It does not change any
+     UI, CSS, or page logic — it only adds a save-to-Firebase call
+     that the existing submitRegister() function invokes.
+     ============================================================ -->
+<script type="module" src="firebase.js"></script>
+</body>
+</html>
